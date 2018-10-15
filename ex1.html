@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+    <h1>Hello this is some text</h1>
+  <script>
+	  function range(start, end, step){
+		  let result = [];
+			if (step < 0){
+				for(let i = start; i >= end; i += step){
+					result.push(i);
+				}
+			} else if(step == undefined) {
+				for(let i = start; i <= end; i++){
+					result.push(i);
+				}
+			} else {
+				for(let i = start; i <= end; i += step){
+					result.push(i);
+				}
+			}
+		  return result;
+	  }
+
+		function sum(array){
+			let total = 0;
+			let index = 0;
+			for(var j = 0; j < array.length; j++){
+				var value = array[index];
+				// console.log(value);
+				total += value;
+				index++;
+			}
+			return total;
+		}
+		console.log(sum(range(1, 10)));
+		console.log(range(2, 20, 5))
+		console.log(range(5, 2, -1));
+		console.log(range(1, 10));
+  </script>
+</body>
+</html>
